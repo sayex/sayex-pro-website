@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">SAYEX avatar logo</title>
+  <desc id="desc">A sharp terminal-inspired SAYEX logo in navy, white, red, and blue.</desc>
+  <rect width="1024" height="1024" fill="#050b16"/>
+  <path fill="#1f6fff" d="M702 96h126v126H702zM794 222h62v392h-62z"/>
+  <path fill="#ef233c" d="M150 198h634v634H150z"/>
+  <path fill="#ffffff" d="M210 148h634v634H210z"/>
+  <path fill="#050b16" d="M318 318h84l142 146-142 146h-84l142-146-142-146Z"/>
+  <rect x="572" y="574" width="172" height="62" fill="#050b16"/>
+  <path fill="#ef233c" d="M210 736h396v46H210z"/>
+  <path fill="#1f6fff" d="M758 148h86v334h-86z"/>
+  <text
+    x="512"
+    y="930"
+    fill="#ffffff"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    font-size="92"
+    font-weight="800"
+    text-anchor="middle"
+  >SAYEX</text>
+</svg>

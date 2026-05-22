@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SAYEX favicon">
+  <rect width="512" height="512" fill="#050b16"/>
+  <rect x="72" y="92" width="328" height="328" fill="#ef233c"/>
+  <rect x="112" y="58" width="328" height="328" fill="#1f6fff"/>
+  <rect x="92" y="76" width="328" height="328" fill="#ffffff"/>
+  <path fill="#050b16" d="M181 181h42l72 75-72 75h-42l72-75-72-75Z"/>
+  <rect x="300" y="313" width="86" height="34" fill="#050b16"/>
+  <path fill="#ef233c" d="M92 397h218v23H92z"/>
+  <path fill="#1f6fff" d="M377 76h43v187h-43z"/>
+</svg>
