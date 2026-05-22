@@ -71,6 +71,7 @@ export const workHighlights = [
     period: '2026 - Present',
     role: 'Co-Owner / Full-Stack Developer',
     company: 'Avryq: Real-Time Events',
+    href: 'https://avryq.app',
     icon: Rocket,
     points: [
       'Co-founded and leads development for a real-time event discovery platform focused on local events, maps, businesses, and community engagement.',

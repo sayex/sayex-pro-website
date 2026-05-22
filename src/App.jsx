@@ -277,13 +277,25 @@ function WorkSection() {
 				<div className="absolute left-5 top-0 hidden h-full w-px bg-white/10 md:block" />
 				<div className="timeline-progress absolute left-5 top-0 hidden h-full w-px origin-top scale-y-0 bg-red md:block" />
 				<div className="space-y-6">
-					{workHighlights.map(({ period, role, company, icon: Icon, points }) => (
+					{workHighlights.map(({ period, role, company, href, icon: Icon, points }) => (
 						<article key={`${role}-${company}`} className="timeline-item" data-reveal>
 							<div className="timeline-marker">
 								<Icon size={20} />
 							</div>
 							<div className="min-w-0">
-								<p className="font-mono text-sm text-blue-soft">{period}</p>
+								<div className="flex flex-wrap items-center gap-3">
+									<p className="font-mono text-sm text-blue-soft">{period}</p>
+									{href ? (
+										<a
+											href={href}
+											target="_blank"
+											rel="noreferrer"
+											className="inline-flex items-center gap-1 border border-white/14 px-2.5 py-1 font-mono text-xs font-bold text-white/72 transition hover:border-blue hover:bg-white hover:text-ink focus:outline-none focus:ring-2 focus:ring-blue"
+										>
+											avryq.app <ExternalLink size={13} />
+										</a>
+									) : null}
+								</div>
 								<h3 className="mt-2 text-2xl font-black text-white">{role}</h3>
 								<p className="mt-1 font-semibold text-white/72">{company}</p>
 								<ul className="mt-5 grid gap-3">
