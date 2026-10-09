@@ -6,11 +6,11 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-t border-white/10 bg-red py-20 text-white sm:py-24"
+      className="relative overflow-hidden border-t border-white/10 bg-red-fill py-20 text-white sm:py-24"
     >
       <div className="page-container grid gap-8 lg:grid-cols-[1fr_0.85fr]">
         <div data-reveal>
-          <p className="font-mono text-sm font-bold text-white/76">
+          <p className="font-mono text-sm font-bold text-white">
             Available for software builds, product work, and technical leadership
           </p>
           <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight sm:text-5xl">

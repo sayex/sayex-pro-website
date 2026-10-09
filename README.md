@@ -1,6 +1,6 @@
 # Eric Sayer Portfolio
 
-Last updated: 2026-10-09 02:11 AM MDT
+Last updated: 2026-10-09 02:18 AM MDT
 
 [![CI](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml/badge.svg)](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml)
 
@@ -78,6 +78,24 @@ together. Anything marked `data-reveal` starts hidden and fades in when scrolled
 don't nest `data-reveal` elements. Visitors who prefer reduced motion get every section shown
 immediately and no animation.
 
+## Colors
+
+Theme colors are tokens in the `@theme` block of `src/styles.css`. Red and blue come in
+variants tuned for contrast, so pick the one that matches the job:
+
+| Token        | Hex       | Use for                                                         |
+| ------------ | --------- | --------------------------------------------------------------- |
+| `red`        | `#ef233c` | Accents with no text on them: scroll bar, icons, dots, shadows  |
+| `red-fill`   | `#e3112a` | Backgrounds behind white text: buttons, contact band, selection |
+| `red-bright` | `#f13c52` | Red text on the dark code panel                                 |
+| `red-dark`   | `#bd1027` | Red text on white (projects section)                            |
+| `blue-fill`  | `#186bff` | Blue behind white text (primary button hover)                   |
+
+Every text pair meets WCAG AA (4.5:1). `src/styles.contrast.test.js` checks them, including the
+code panel where the hero photo shows through, so `npm test` fails if a token change drops one
+below AA. Axe still flags the code panel's line numbers (2.7:1); they're decorative and hidden
+from screen readers, which WCAG exempts.
+
 ## Continuous integration
 
 `.github/workflows/ci.yml` runs on every pull request and on pushes to `main`. Right after
@@ -116,7 +134,4 @@ Dependency versions are pinned exactly, so Dependabot PRs change both `package.j
 ## Known limitations
 
 - The section links in the header are hidden below 768px and there is no mobile menu.
-- Two color pairs miss the WCAG AA 4.5:1 contrast minimum for normal-size text: white on the
-  brand red `#ef233c` (4.2:1, the red primary buttons) and the 76%-white eyebrow line in the
-  contact section (2.9:1).
 - Dark theme only; there is no light mode.

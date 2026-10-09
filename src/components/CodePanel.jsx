@@ -6,7 +6,7 @@ const FOCUS_SNIPPET = [
 
 /** Keyword first, value last, everything between in neutral text. */
 function tokenColor(index, tokenCount) {
-  if (index === 0) return 'text-red';
+  if (index === 0) return 'text-red-bright';
   if (index === tokenCount - 1) return 'text-blue-soft';
   return 'text-white/76';
 }
