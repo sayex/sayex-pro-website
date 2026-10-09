@@ -58,6 +58,12 @@ describe('App', () => {
     expect(screen.getByRole('figure', { name: /developer focus code sample/i })).toBeTruthy();
   });
 
+  it('lets keyboard users reach the code sample, which scrolls sideways on phones', () => {
+    render(<App />);
+    const code = screen.getByRole('figure', { name: /developer focus code sample/i });
+    expect(code.querySelector('pre').tabIndex).toBe(0);
+  });
+
   it('never nests scroll-reveal targets, so each block fades in once', () => {
     const { container } = render(<App />);
     expect(container.querySelectorAll('[data-reveal] [data-reveal]')).toHaveLength(0);

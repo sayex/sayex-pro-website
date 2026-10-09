@@ -23,7 +23,11 @@ export function CodePanel() {
         </div>
         <span className="font-mono text-xs text-white/50">sayex.profile.js</span>
       </div>
-      <pre className="overflow-hidden font-mono text-sm leading-7 text-white/78">
+      {/* On narrow phones the longest line scrolls sideways; tabIndex lets keyboard users scroll it. */}
+      <pre
+        tabIndex={0}
+        className="overflow-x-auto font-mono text-sm leading-7 text-white/78 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue"
+      >
         {FOCUS_SNIPPET.map((tokens, row) => (
           <code key={tokens.join('')} className="block">
             <span className="mr-4 text-white/30" aria-hidden="true">
