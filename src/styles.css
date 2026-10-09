@@ -70,6 +70,11 @@ body {
     @apply px-4 py-2 text-sm font-semibold text-white/68 transition hover:bg-white hover:text-ink focus:outline-none focus:ring-2 focus:ring-blue;
   }
 
+  /* Full-width rows in the mobile menu panel; 48px tall for touch. */
+  .mobile-nav-link {
+    @apply flex min-h-12 items-center justify-between border-t border-white/8 px-4 text-sm font-semibold text-white/85 transition first:border-t-0 hover:bg-white hover:text-ink focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue sm:px-6;
+  }
+
   .icon-button {
     @apply grid h-10 w-10 place-items-center border border-white/18 bg-white/8 text-white transition hover:bg-white hover:text-ink focus:outline-none focus:ring-2 focus:ring-blue;
   }
