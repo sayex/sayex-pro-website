@@ -22,6 +22,11 @@ All notable changes to this project are documented here. The format follows
 
 ### Fixed
 
+- Text on red and blue now meets WCAG AA contrast. Buttons, the contact band, timeline markers
+  and text selection use `red-fill` (`#e3112a`, 4.79:1 with white instead of 4.22:1). The
+  contact eyebrow line is full white (4.79:1, was 2.91:1). The button hover blue is `#186bff`
+  (4.58:1, was 4.40:1). The red code keyword is `#f13c52` (4.56:1 over the brightest part of
+  the hero photo, was 4.12:1).
 - The red scroll-progress bar and the experience timeline line never appeared. Tailwind's
   `scale-x-0`/`scale-y-0` kept them at zero size underneath Anime.js's transform, and the
   timeline's scroll thresholds were written in GSAP order, which Anime.js reads as an empty
@@ -45,6 +50,8 @@ All notable changes to this project are documented here. The format follows
   npm registry signature or has an invalid provenance attestation.
 - Dependabot version updates for npm and GitHub Actions: weekly, grouped, with a 7-day cooldown
   (30 days for npm major versions).
+- A contrast test (`src/styles.contrast.test.js`) that fails if a theme color change drops a
+  text pair below WCAG AA.
 
 ## [0.1.0] - 2026-05-21
 

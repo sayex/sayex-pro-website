@@ -5,9 +5,16 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --color-ink: #050b16;
   --color-panel: #0c1424;
+  /* Brand red for accents with no text on them: scroll bar, icons, dots, shadows. */
   --color-red: #ef233c;
   --color-red-dark: #bd1027;
+  /* Red behind white text (buttons, contact band, selection). WCAG AA: 4.79:1. */
+  --color-red-fill: #e3112a;
+  /* Red text on the code panel, even where the hero photo shows through. WCAG AA: 4.56:1. */
+  --color-red-bright: #f13c52;
   --color-blue: #1f6fff;
+  /* Blue behind white text (primary button hover). WCAG AA: 4.58:1. */
+  --color-blue-fill: #186bff;
   --color-blue-soft: #72a7ff;
   --shadow-hard: 8px 8px 0 rgba(239, 35, 60, 0.82);
 }
@@ -23,7 +30,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-red);
+  background: var(--color-red-fill);
   color: var(--color-white);
 }
 
@@ -72,7 +79,7 @@ body {
   }
 
   .primary-button {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 bg-red px-5 py-3 text-sm font-black text-white shadow-hard transition hover:-translate-y-0.5 hover:bg-blue focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 bg-red-fill px-5 py-3 text-sm font-black text-white shadow-hard transition hover:-translate-y-0.5 hover:bg-blue-fill focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink;
   }
 
   .secondary-button {
@@ -104,7 +111,7 @@ body {
   }
 
   .timeline-marker {
-    @apply grid h-10 w-10 place-items-center bg-red text-white shadow-hard md:relative md:z-10;
+    @apply grid h-10 w-10 place-items-center bg-red-fill text-white shadow-hard md:relative md:z-10;
   }
 
   .timeline-link {
