@@ -1,10 +1,14 @@
+// Everything the page says about Eric lives here; components only handle layout.
 import {
   BookOpen,
   Braces,
+  BriefcaseBusiness,
   Cloud,
   Code2,
   Database,
+  GitBranch,
   GraduationCap,
+  Mail,
   MapPinned,
   Presentation,
   Rocket,
@@ -13,24 +17,42 @@ import {
   Workflow,
 } from 'lucide-react';
 
+export const githubUser = 'sayex';
+
+const githubRepoUrl = (repo) => `https://github.com/${githubUser}/${repo}`;
+
 export const contactLinks = {
   email: 'mailto:me@ericsayer.com',
-  github: 'https://github.com/sayex',
+  github: `https://github.com/${githubUser}`,
   linkedin: 'https://www.linkedin.com/in/ericsayer',
   resume: '/Eric_Sayer_Software_Resume.pdf',
 };
 
+/** Rows in the closing contact panel, in display order. Labels come from the href. */
+export const contactChannels = [
+  { icon: Mail, href: contactLinks.email },
+  { icon: GitBranch, href: contactLinks.github },
+  { icon: BriefcaseBusiness, href: contactLinks.linkedin },
+];
+
 export const navItems = [
-  ['Work', '#work'],
-  ['Stack', '#stack'],
-  ['GitHub', '#github'],
-  ['Contact', '#contact'],
+  { label: 'Work', href: '#work' },
+  { label: 'Stack', href: '#stack' },
+  { label: 'GitHub', href: '#github' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export const signatureStats = [
   { value: '7+', label: 'years building full-stack software' },
   { value: '5+', label: 'years teaching MERN developers' },
   { value: '120+', label: 'stores supported through reporting systems' },
+];
+
+/** The three-up strip under the hero. `accent` picks the pulse dot color. */
+export const workPrinciples = [
+  { label: 'Production-minded builds', accent: 'red' },
+  { label: 'Teaching-grade clarity', accent: 'blue' },
+  { label: 'Business-aware delivery', accent: 'red' },
 ];
 
 export const capabilities = [
@@ -66,6 +88,7 @@ export const capabilities = [
   },
 ];
 
+/** Timeline entries, newest first. An optional `href` renders a link labelled with its domain. */
 export const workHighlights = [
   {
     period: '2026 - Present',
@@ -138,7 +161,7 @@ export const projects = [
     description:
       'A JavaScript API project using music and live-event data, OAuth, AJAX, Node.js, and collaborative frontend delivery.',
     stack: ['JavaScript', 'jQuery', 'Spotify API', 'OAuth'],
-    href: 'https://github.com/sayex/Green-Light',
+    href: githubRepoUrl('Green-Light'),
   },
   {
     name: 'Movie Mate',
@@ -147,7 +170,7 @@ export const projects = [
     description:
       'A collaborative full-stack bootcamp application built around React, Node.js, MySQL, APIs, MVC patterns, and backend design practice.',
     stack: ['React', 'Node.js', 'MySQL', 'APIs'],
-    href: 'https://github.com/sayex/MovieMate',
+    href: githubRepoUrl('MovieMate'),
   },
   {
     name: 'Milliways',
@@ -156,13 +179,10 @@ export const projects = [
     description:
       'A full-stack collaborative project from the University of Utah program, focused on practical application architecture and team delivery.',
     stack: ['Full-stack', 'MVC', 'APIs', 'Team delivery'],
-    href: 'https://github.com/sayex/Milliways',
+    href: githubRepoUrl('Milliways'),
   },
 ];
 
-export const githubRepos = [
-  { name: 'Green-Light', url: 'https://github.com/sayex/Green-Light' },
-  { name: 'MovieMate', url: 'https://github.com/sayex/MovieMate' },
-  { name: 'Milliways', url: 'https://github.com/sayex/Milliways' },
-  { name: 'rendershowcase', url: 'https://github.com/sayex/rendershowcase' },
-];
+export const githubRepos = ['Green-Light', 'MovieMate', 'Milliways', 'rendershowcase'].map(
+  (name) => ({ name, url: githubRepoUrl(name) }),
+);
