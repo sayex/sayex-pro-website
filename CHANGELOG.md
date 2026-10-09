@@ -43,6 +43,8 @@ All notable changes to this project are documented here. The format follows
 - GitHub Actions CI: lint, format check, tests, build and `npm audit`.
 - CI runs `npm audit signatures` after install, failing the build if any package lacks a valid
   npm registry signature or has an invalid provenance attestation.
+- Dependabot version updates for npm and GitHub Actions: weekly, grouped, with a 7-day cooldown
+  (30 days for npm major versions).
 
 ## [0.1.0] - 2026-05-21
 
