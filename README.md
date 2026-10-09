@@ -1,6 +1,6 @@
 # Eric Sayer Portfolio
 
-Last updated: 2026-10-09 02:05 AM MDT
+Last updated: 2026-10-09 02:11 AM MDT
 
 [![CI](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml/badge.svg)](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml)
 
@@ -86,6 +86,19 @@ registry signature or has an invalid provenance attestation. Then come lint, for
 build and `npm audit` (all severities). Actions are pinned by commit SHA.
 
 To run the signature check locally: `npm audit signatures`.
+
+## Dependency updates
+
+`.github/dependabot.yml` has Dependabot check npm packages and GitHub Actions every Monday:
+
+- **npm:** all minor and patch bumps arrive together in one PR. Each major version gets its own
+  PR, since those can need code changes. New releases wait 7 days (30 for majors) before
+  Dependabot proposes them, so a broken or compromised version has time to be pulled first.
+- **GitHub Actions:** all action bumps arrive in one PR, also after a 7-day wait. Dependabot
+  updates both the pinned commit SHA and the `# vX.Y.Z` comment next to it.
+
+Dependency versions are pinned exactly, so Dependabot PRs change both `package.json` and
+`package-lock.json`. CI runs on each one; merge when it's green.
 
 ## Troubleshooting
 
