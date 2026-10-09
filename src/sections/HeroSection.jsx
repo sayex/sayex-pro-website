@@ -17,9 +17,11 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[rgba(3,8,18,0.62)]" />
       </div>
       <div className="absolute inset-x-0 top-16 -z-10 h-px bg-white/10" />
-      <div className="page-container grid items-center gap-10 pb-16 pt-10 md:grid-cols-[1.08fr_0.92fr] lg:pb-20 lg:pt-16">
+      {/* minmax(0,1fr) on phones: an auto column can't shrink below the code panel's longest
+          line, which pushed the whole hero past the right edge of the screen. */}
+      <div className="page-container grid grid-cols-[minmax(0,1fr)] items-center gap-10 pb-16 pt-10 md:grid-cols-[1.08fr_0.92fr] lg:pb-20 lg:pt-16">
         <HeroCopy />
-        <div className="hero-visual grid gap-5">
+        <div className="hero-visual grid gap-5 max-md:grid-cols-[minmax(0,1fr)]">
           <div className="profile-frame">
             <img
               src="/media/eric-profile.jpg"

@@ -1,6 +1,6 @@
 # Eric Sayer Portfolio
 
-Last updated: 2026-10-09 02:24 AM MDT
+Last updated: 2026-10-09 02:29 AM MDT
 
 [![CI](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml/badge.svg)](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml)
 
@@ -126,6 +126,10 @@ Dependency versions are pinned exactly, so Dependabot PRs change both `package.j
   was installed on a different OS or CPU (Vite and Tailwind ship native binaries). Delete
   `node_modules` and run `npm install` on the machine you are building on.
 - **`npm run format:check` fails in CI.** Run `npm run format` and commit the result.
+- **Content runs off the right edge on phones.** A grid column defaults to `auto`, which can't
+  shrink below its widest unbreakable content (a code line, a long URL). Give it
+  `grid-cols-[minmax(0,1fr)]` or put `min-w-0` on the item, and let the wide content scroll or
+  wrap. The hero does this so the code sample's longest line can't widen the page.
 - **A section never appears.** It has `data-reveal` but the animation hook never saw it, usually
   because it was rendered after first mount. Render it with the page, or drop `data-reveal`.
 - **The red scroll bar or timeline line doesn't move.** Collapse them with

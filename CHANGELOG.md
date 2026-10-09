@@ -22,6 +22,11 @@ All notable changes to this project are documented here. The format follows
 
 ### Fixed
 
+- On phones the hero ran past the right edge of the screen and was cut off (at 375px its column
+  was 394px wide). The code sample's longest line set the width of the hero's `auto` grid
+  column. The column now shrinks to the screen, and the code sample scrolls sideways inside its
+  panel instead; it's keyboard-focusable so it can be scrolled without a mouse. Tablet and
+  desktop layouts are unchanged.
 - Text on red and blue now meets WCAG AA contrast. Buttons, the contact band, timeline markers
   and text selection use `red-fill` (`#e3112a`, 4.79:1 with white instead of 4.22:1). The
   contact eyebrow line is full white (4.79:1, was 2.91:1). The button hover blue is `#186bff`
