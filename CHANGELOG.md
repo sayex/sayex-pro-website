@@ -52,6 +52,9 @@ All notable changes to this project are documented here. The format follows
   (30 days for npm major versions).
 - A contrast test (`src/styles.contrast.test.js`) that fails if a theme color change drops a
   text pair below WCAG AA.
+- Mobile menu: below 768px a menu button next to the GitHub icon opens the section links as
+  full-width 48px rows. It closes when a link is chosen, on Esc (focus returns to the button) or
+  on a tap outside the header. Desktop is unchanged.
 
 ## [0.1.0] - 2026-05-21
 

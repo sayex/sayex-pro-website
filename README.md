@@ -1,6 +1,6 @@
 # Eric Sayer Portfolio
 
-Last updated: 2026-10-09 02:18 AM MDT
+Last updated: 2026-10-09 02:24 AM MDT
 
 [![CI](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml/badge.svg)](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml)
 
@@ -67,6 +67,8 @@ Almost every change to what the page says happens in `src/profileData.js`:
 - **Projects** go in `projects`; use `githubRepoUrl('RepoName')` for GitHub links.
 - **Repositories** in the GitHub section are the names in `githubRepos`.
 - **Contact rows** come from `contactChannels`; their labels are derived from the links.
+- **Header links** come from `navItems`. The same list feeds the mobile menu, which replaces the
+  header links below 768px.
 
 Section headings and intro copy live in the matching file under `src/sections/`.
 
@@ -133,5 +135,4 @@ Dependency versions are pinned exactly, so Dependabot PRs change both `package.j
 
 ## Known limitations
 
-- The section links in the header are hidden below 768px and there is no mobile menu.
 - Dark theme only; there is no light mode.
