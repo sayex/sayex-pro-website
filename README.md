@@ -1,6 +1,6 @@
 # Eric Sayer Portfolio
 
-Last updated: 2026-10-09 02:34 AM CDT
+Last updated: 2026-10-09 02:05 AM MDT
 
 [![CI](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml/badge.svg)](https://github.com/sayex/sayex-pro-website/actions/workflows/ci.yml)
 
@@ -80,8 +80,12 @@ immediately and no animation.
 
 ## Continuous integration
 
-`.github/workflows/ci.yml` runs on every pull request and on pushes to `main`: lint, format
-check, tests, build and `npm audit` (all severities). Actions are pinned by commit SHA.
+`.github/workflows/ci.yml` runs on every pull request and on pushes to `main`. Right after
+`npm ci` it runs `npm audit signatures`, which fails if any installed package lacks a valid npm
+registry signature or has an invalid provenance attestation. Then come lint, format check, tests,
+build and `npm audit` (all severities). Actions are pinned by commit SHA.
+
+To run the signature check locally: `npm audit signatures`.
 
 ## Troubleshooting
 
